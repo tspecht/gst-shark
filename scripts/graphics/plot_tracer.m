@@ -152,6 +152,7 @@ function plot_tracer(tracer,savefig,format,legend_location)
         xlabel('time (seconds)','fontsize',FONTSIZE)
         ylabel('time (nanoseconds)','fontsize',FONTSIZE)
         xlim([timestamp_min,timestamp_max])
+        ylim([0, 6000000])
         if (0 == strcmp(legend_location,'extern'))
             legend(str2latex(tracer.proctime.element_name_list),'Location',legend_location)
         end
